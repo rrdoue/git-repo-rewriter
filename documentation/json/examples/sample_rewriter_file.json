@@ -1,0 +1,93 @@
+{
+    "eba1ca309e2edeac9b077f6ea626d8bab6697e42" : {
+        "include": false,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Cleaned up the file to minimize impact on the organization.",
+        "files": [ "src/wmcontroller/wmrmsrvr.py" ],
+        "comments": "This was the change used to clean up the compromised file(s)."
+    },
+    "0640359c42e4b4754e048ac6370c0d4ca7d8d703" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Updated the wmcontroller version number.",
+        "files": [ "pyproject.toml" ],
+        "comments": null
+    },
+    "8d1cf45b240023aa5d7d17d0d863cda324d3c0da" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. New file, an example .env file to set parameters for the http status check, such as http / https, port, and a user with administrator privileges and accompanying password.\n2. No ruff check on this file.",
+        "files": [ "src/wmcontroller/.env.example" ],
+        "comments": null
+            },
+    "b61d2bbf7657931dd1d45087b868c8e810e9a3cc" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Added a configuration or .env file functionality using the environs package with supporting code changes.  It has one concern in that the file appears to have to be located in the same directory as where the python files are located, but otherwise has more than enough functionality for our requirements.\n2. Other minor changes and formatting, including a ruff check.",
+        "files": [ "src/wmcontroller/wmctrl.py" ],
+        "comments": null
+    },
+    "f490a4b0b7854bbc2644d1ce2bce6736cff1091b" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Update the pyproject.toml file, updating the version to 0.1.2.",
+        "files": [ "pyproject.toml" ],
+        "comments": null
+    },
+    "d8f6217ab50f0b54dd1175852b54aee61284bc96" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Updated the functionality related to running the wm_manager.py script with command-line parameter values or arguments.  The changes add functionality to check status of or stop webMethods components, rather than being previously limited to the status action only.  Most of the workflow is based on if and else if (Python elif) statements.\n2. Update the menu-driven functionality in wm_manager.py to accommodate the addition of a stop action in the workflow.  This (sic) changes are similar to the changes in number 1, in a different section of the file.",
+        "files": [ "src/wmcontroller/wm_manager.py" ],
+        "comments": null
+    },
+    "350b5745c93655199e9f1324bf27df5b977bb8a2" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Updated the pyproject.toml version number to v0.1.1 in order to add another version of the build file to the test pypi host.",
+        "files": [ "pyproject.toml" ],
+        "comments": null
+    },
+    "0b766f26dcfb05ea89bb67d879c20633217a50ad" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Updated the README.md file to better describe the module.",
+        "files": [ "README.md" ],
+        "comments": null
+    },
+    "903b388449930b01e708435aa72853b15c7d173b" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Modified the required Python version in pyproject.toml to allow for installing and testing on another MacOS system using an earlier version of Python.\n2. Updated the publish-url value (also in pyproject.toml), which was missing a slash (`/`) at the end of the url.  The incorrect value was resulting in an error, \"Upload failed with status code 400 Bad Request.\"",
+        "files": [ "pyproject.toml" ],
+        "comments": null
+    },
+    "4c0849f74a4b67ae945363bbce2c8f89814d47bf" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Modified the required Python version to allow for installing and testing on another MacOS system using an earlier version of Python.",
+        "files": [ "pyproject.toml" ],
+        "comments": null
+    },
+    "51428d59d6cac19bc07b88db76785a23dc3fc196" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Minor changes to the wmctrl.py file description.",
+        "files": [ "src/wmcontroller/wmctrl.py" ],
+        "comments": null
+    },
+    "65acc7aaeb4f57bff53f009cecd085f1b8d4bcc3" : {
+        "include": true,
+        "parent_id": null,
+        "commit message": "Changes:\n1. Added new file wmrmsrvr.py that provides limited remote control of components on remote servers, adding a stop action for the integration server.  We understand that this could have been added to the wmctrl.py file, but this builds on functionality while minimizing compromising the existing wmctrl.py file.\n2. Updated an existing file, wmctrl.py, to accommodate calling the stop integration server action in the new file.",
+        "files": [ "src/wmcontroller/wmctrl.py, src/wmcontroller/wmrmsrvr.py" ],
+        "comments": null
+    },
+    "commit id" : {
+        "include": null,
+        "parent_id": null,
+        "commit message": null,
+        "files": null,
+        "comments": null
+    }
+}
