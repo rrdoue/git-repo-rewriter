@@ -15,14 +15,11 @@ def process_file():  # input_file, output_file, separator=''
 
     input_file_source = '/Users/rrdoue/Documents/code/python/projects/git-repo-rewriter/documentation/json/examples'
     input_file = 'sample_rewriter_file.json'
-    output_file_destination = '/Users/rrdoue/Documents/code/python/projects/git-repo-rewriter/documentation' \
-                              '/sample_files '
 
     if debug:
         print(f"{input_file_source}/{input_file}")
 
     commit_dict = json.load(open(f"{input_file_source}/{input_file}"))
 
-    print(f'{commit_dict}')
 
     return None
