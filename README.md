@@ -1,1 +1,2 @@
-git_repo_rewriter
+git-repo-writer
+
