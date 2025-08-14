@@ -1,0 +1,22 @@
+[project]
+name = "git-repo-rewriter"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ray Doue", email = "rrdoue@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+git-repo-rewriter = "git_repo_rewriter:main"
+
+[build-system]
+requires = ["uv_build>=0.7.17,<0.8"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+]
