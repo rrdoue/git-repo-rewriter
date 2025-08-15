@@ -21,5 +21,6 @@ def process_file():  # input_file, output_file, separator=''
 
     commit_dict = json.load(open(f"{input_file_source}/{input_file}"))
 
+    print(f'The dictionary created from the file follows:\n\n{json.dumps(commit_dict, indent=2)}')
 
     return None
