@@ -80,7 +80,7 @@
         "include": true,
         "parent_id": null,
         "commit message": "Changes:\n1. Added new file wmrmsrvr.py that provides limited remote control of components on remote servers, adding a stop action for the integration server.  We understand that this could have been added to the wmctrl.py file, but this builds on functionality while minimizing compromising the existing wmctrl.py file.\n2. Updated an existing file, wmctrl.py, to accommodate calling the stop integration server action in the new file.",
-        "files": [ "src/wmcontroller/wmctrl.py, src/wmcontroller/wmrmsrvr.py" ],
+        "files": [ "src/wmcontroller/wmctrl.py", "src/wmcontroller/wmrmsrvr.py" ],
         "comments": null
     },
     "commit id" : {
