@@ -87,7 +87,7 @@
         "include": null,
         "parent_id": null,
         "commit message": null,
-        "files": null,
+        "files": [ ],
         "comments": null
     }
 }
