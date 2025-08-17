@@ -1,10 +1,11 @@
 #! /usr/bin/env python3
 
-"""python-functions, Section 4, Exercise 19b: Define a function that takes one mandatory  argument, the name of an 
-output file, any number of additional input file arguments,  and an optional separator argument that defaults to an 
-empty string.  The function  should read all the lines in each input file and write them to the named output  
-file, adding the separator in between the contents of each input file.  The test cell uses files in the current 
-executable file location to avoid having to  provide a full path to the input files. """
+"""
+This module file defines some functions where the eventual goal is to process a file or other source of git
+commit entries in a way that one can rewrite a git repository with the commits in order of occurrence to overwrite
+compromised values, such as passwords or api keys, in any of the files.  The inbound file must be accompanied by a
+directory or other source of each commit's files in their original state.
+"""
 
 import json
 import os
@@ -21,7 +22,12 @@ def process_file():
     for key, value in commit_dict.items():
         print(f'{key} :')
         for subkey, subvalue in value.items():
-            print(f'{subkey} : {subvalue}')
+            if subkey == 'files':
+                print(f'File name(s):')
+                for each_file in subvalue:
+                    print(f'\tFile name: {each_file}')
+            else:
+                print(f'{subkey} : {subvalue}')
         print()
 
     if debug:
