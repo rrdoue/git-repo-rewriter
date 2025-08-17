@@ -10,17 +10,21 @@ import json
 import os
 
 
-def process_file():  # input_file, output_file, separator=''
-    debug = False
+def process_file():
+    debug = True
 
     input_file_source = '/Users/rrdoue/Documents/code/python/projects/git-repo-rewriter/documentation/json/examples'
     input_file = 'sample_rewriter_file.json'
 
-    if debug:
-        print(f"{input_file_source}/{input_file}")
-
     commit_dict = json.load(open(f"{input_file_source}/{input_file}"))
 
-    print(f'The dictionary created from the file follows:\n\n{json.dumps(commit_dict, indent=2)}')
+    for key, value in commit_dict.items():
+        print(f'{key} :')
+        for subkey, subvalue in value.items():
+            print(f'{subkey} : {subvalue}')
+        print()
+
+    if debug:
+        print(f'The dictionary created from the file follows:\n\n{json.dumps(commit_dict, indent=2)}')
 
     return None
