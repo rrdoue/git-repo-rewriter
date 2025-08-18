@@ -17,15 +17,17 @@ def process_file():
     input_file_source = '/Users/rrdoue/Documents/code/python/projects/git-repo-rewriter/documentation/json/examples'
     input_file = 'sample_rewriter_file.json'
 
+    commit_files_source = '/Users/rrdoue/Documents/applications/git/clean_wmcontroller/files/'
+
     commit_dict = json.load(open(f"{input_file_source}/{input_file}"))
 
     for key, value in commit_dict.items():
         print(f'{key} :')
         for subkey, subvalue in value.items():
             if subkey == 'files':
-                print(f'File name(s):')
+                print(f'File name(s) and location:')
                 for each_file in subvalue:
-                    print(f'\tFile name: {each_file}')
+                    print(f'\t{commit_files_source}{each_file}')
             else:
                 print(f'{subkey} : {subvalue}')
         print()
