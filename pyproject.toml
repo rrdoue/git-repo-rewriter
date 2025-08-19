@@ -6,8 +6,11 @@ readme = "README.md"
 authors = [
     { name = "Ray Doue", email = "rrdoue@gmail.com" }
 ]
+# GitPython requires Python >= 3.7, checking other dependencies related to Python versions.
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "gitpython>=3.1.45",
+]
 
 [project.scripts]
 git-repo-rewriter = "git_repo_rewriter:main"
