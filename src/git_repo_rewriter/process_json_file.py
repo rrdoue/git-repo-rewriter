@@ -4,11 +4,16 @@
 This module file defines some functions where the eventual goal is to process a file or other source of git
 commit entries in a way that one can rewrite a git repository with the commits in order of occurrence to overwrite
 compromised values, such as passwords or api keys, in any of the files.  The inbound file must be accompanied by a
-directory or other source of each commit's files in their original state.
+directory or other source of each commit's files in their original state. 
+todos: 
+1. Add an env file that allows one to set all the required input values, such as the local repository directory, the 
+file locations for all affected commits, and the reset --hard commit. This avoids entering arguments on the command 
+line or through requesting input.
 """
 
 import json
 import os
+import rewriter_utilities
 
 
 def process_file():
@@ -36,5 +41,9 @@ def process_file():
 
     if debug:
         print(f'The dictionary created from the file follows:\n\n{json.dumps(commit_dict, indent=2)}')
+
+    if debug:
+        reversed_commit_dict = rewriter_utilities.reverse_dict(commit_dict) 
+        print(f'The reversed dictionary created from the file follows:\n\n{json.dumps(reversed_commit_dict, indent=2)}')
 
     return None
