@@ -17,7 +17,7 @@ import rewriter_utilities
 
 
 def process_file():
-    debug = True
+    debug = False
 
     input_file_source = '/Users/rrdoue/Documents/code/python/projects/git-repo-rewriter/documentation/json/examples/'
     input_file = 'sample_rewriter_file.json'
@@ -26,7 +26,9 @@ def process_file():
 
     commit_dict = json.load(open(f"{input_file_source}{input_file}"))
 
-    for key, value in commit_dict.items():
+    reversed_commit_dict = rewriter_utilities.reverse_dict(commit_dict)
+
+    for key, value in reversed_commit_dict.items():
         print(f'{key} :')
         for subkey, subvalue in value.items():
             if subkey == 'files':
